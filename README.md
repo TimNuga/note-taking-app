@@ -45,6 +45,14 @@ Once the server is running, you can access the API endpoints. For detailed endpo
 ## Testing
 To run tests, execute: python manage.py test
 
+## Langchain Integration
+[Langchain](https://python.langchain.com/docs/get_started/introduction) was used to leverage the chatGPT-3.5 model and it was ultimately integrated into the application providing a feature that summarizes notes passed into the model at a given endpoint in the REST structure. The current implementation uses the langchain large language model (llm) and the infrastructure provided by langchain when it is properly installed in a project. This infrastructure provided includes the ChatOpenAI model (which takes in the OpenAI API key required for gaining access to the OpenAI API), the PromptTemplate from the langchain prompts, the langchain chain class, and the [StuffDocumentsChain](https://python.langchain.com/docs/modules/chains/document/stuff) provides us with the heavy lifting required to summarize the note contents passed in as documents to the model. 
+
+### Difficulties Faced
+* Passing in the string values obtained in the notes as documents for the [StuffDocumentsChain](https://python.langchain.com/docs/modules/chains/document/stuff) to utilize.
+* Choosing the right kind of llm model for this feature.
+* Utilizing the right kind of prompt template.
+
 ## Configuration
 
 ### Environment Variables
