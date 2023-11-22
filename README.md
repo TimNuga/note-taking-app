@@ -12,7 +12,7 @@ This Django Note-Taking application provides a simple yet effective way to creat
 To set up the project locally, follow these steps:
 
 1. Clone the repository:
-    git clone https://github.com/timnuga/note-taking-app.git
+    git clone https://github.com/TimNuga/note-taking-app.git
     cd note-taking-app
 
 2. Set up a virtual environment:
